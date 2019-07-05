@@ -219,13 +219,12 @@ LIB_SRC_C += \
 	lib/oofatfs/ffunicode.c
 endif
 
-ifeq ($(MICROPY_PY_LVGL), 1)
+# ifeq ($(MICROPY_PY_LVGL), 1)
 LIB_SRC_C += \
 	lib/lv_bindings/driver/esp32/modlvesp32.c \
 	lib/lv_bindings/driver/esp32/modILI9341.c \
-	lib/lv_bindings/driver/esp32/modxpt2046.c \
 	lib/lv_bindings/driver/esp32/modrtch.c
-endif
+# endif
 
 DRIVERS_SRC_C = $(addprefix drivers/,\
 	bus/softspi.c \
